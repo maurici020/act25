@@ -31,3 +31,10 @@ def agregar(patente,tipo,anio,precio):
     auto = {"patente":patente,"tipo":tipo,"anio":anio,"precio":precio}
     vehiculos.append(auto)
     print("vehiculo agregado")
+
+def mostrar(patente):
+    posicion = buscar(patente)
+    if posicion>=0:
+        print(f"patente encontrada : {vehiculos[posicion]}")
+    else:
+        print("patente no encontrada")
