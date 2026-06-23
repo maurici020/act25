@@ -30,7 +30,7 @@ while True:
             case 3: pass
             case 4: pass
             case 5: pass
-            case 6: pass
+            case 6: listarconiva()
             case 7: pass
             case _: print("no valido")
     except Exception as e:

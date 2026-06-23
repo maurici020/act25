@@ -38,3 +38,11 @@ def mostrar(patente):
         print(f"patente encontrada : {vehiculos[posicion]}")
     else:
         print("patente no encontrada")
+
+def listarconiva():
+    if len(vehiculos)>0:
+        print(f"{"N°"}{"patente":<8} {"tipo":<10} {"año":<6} {"precio":<10}")
+        for i in range(len(vehiculos)):
+            print(f"{i+1} {vehiculos[i]["patente"]:<8} {vehiculos[i]["tipo"]:<10} {vehiculos[i]["anio"]:<6} ${round(vehiculos[i]["precio"]*1.19):<10}")
+    else:
+        print("no hay vehiculos registrados")
