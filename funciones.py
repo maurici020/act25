@@ -46,3 +46,24 @@ def listarconiva():
             print(f"{i+1} {vehiculos[i]["patente"]:<8} {vehiculos[i]["tipo"]:<10} {vehiculos[i]["anio"]:<6} ${round(vehiculos[i]["precio"]*1.19):<10}")
     else:
         print("no hay vehiculos registrados")
+
+def actualizar(patente, nuevo_anio, nuevo_precio):
+
+    posicion = buscar(patente)
+
+    if posicion == -1:
+        print("el vehiculo no esta registrado")
+        return
+
+    if nuevo_anio < 2015 or nuevo_anio > 2026:
+        print("Año no válido")
+        return
+
+    if nuevo_precio < 5000000:
+        print("Precio no válido")
+        return
+
+    vehiculos[posicion]["anio"] = nuevo_anio
+    vehiculos[posicion]["precio"] = nuevo_precio
+
+    print("Vehículo actualizado correctamente")
